@@ -7,7 +7,7 @@ abstract class A {
 
 class B extends A{
     public function callPriv(){
-        self::privMethod();
+        parent::privMethod();
     }
 }
 
