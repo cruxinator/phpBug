@@ -1,5 +1,7 @@
 <?php
 
+
+
 abstract class A {
     private static function privMethod(){
     }
@@ -7,7 +9,10 @@ abstract class A {
 
 class B extends A{
     public function callPriv(){
-        self::privMethod();
+        $class = new ReflectionClass(self::class);
+        $method = $class->getMethod('privMethod');
+        $method->setAccessible(true);
+        $method->invokeArgs(null, null);
     }
 
     protected static function privMethod(){
