@@ -8,7 +8,7 @@ abstract class A {
 }
 
 class B extends A{
-    public function callPriv(){
+    public function __call(){
         $class = new ReflectionClass(self::class);
         $method = $class->getMethod('privMethod');
         $method->setAccessible(true);
