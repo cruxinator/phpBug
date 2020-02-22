@@ -11,7 +11,7 @@ class B extends A{
     }
 
     protected static function privMethod(){
-        parent::privMethod()
+        parent::privMethod();
     }
 }
 
