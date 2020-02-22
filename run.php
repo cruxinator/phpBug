@@ -7,7 +7,11 @@ abstract class A {
 
 class B extends A{
     public function callPriv(){
-        parent::privMethod();
+        self::privMethod();
+    }
+
+    protected static function privMethod(){
+        parent::privMethod()
     }
 }
 
