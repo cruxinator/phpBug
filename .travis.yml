@@ -1,0 +1,9 @@
+language: php
+
+php:
+  - 7.4
+  - nightly
+  
+script:
+  - mkdir -p build/logs
+  - php run.php
